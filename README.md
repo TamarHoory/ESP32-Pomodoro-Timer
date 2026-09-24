@@ -9,10 +9,10 @@ A standalone, tactile desktop Pomodoro productivity timer powered by an **ESP32*
 - **Microcontroller**: ESP32 (ESP32-WROOM-32 / ESP32 DevKit)
 - **Display**: 16x2 Character LCD via I2C backpack (PCF8574) with auto-address discovery (`0x27` / `0x3F`) and real-time visual progress bar.
 - **Tactile Push Buttons**:
-  - **Start / Pause (GPIO 18)**: Toggle countdown or resume paused sessions.
-  - **Reset (GPIO 19)**: Instantly reset session to the configured interval.
-  - **Set Time (GPIO 23)**: Cycle duration in 5-minute steps (5 min up to 60 min).
-- **Audio Feedback (GPIO 25)**: Piezo buzzer delivers audible clicks on button press and a celebratory victory fanfare when the timer completes.
+  - **Start / Pause**: Toggle countdown or resume paused sessions.
+  - **Reset**: Instantly reset session to the configured interval.
+  - **Set Time**: Cycle duration in 5-minute steps (5 min up to 60 min).
+- **Audio Feedback**: Piezo buzzer delivers audible clicks on button press and a celebratory victory fanfare when the timer completes.
 - **Robust Firmware**:
   - Clean **Finite State Machine (FSM)**: `IDLE`, `RUNNING`, `PAUSED`, and `COMPLETED`.
   - Fully **non-blocking timekeeping** using `millis()`.
