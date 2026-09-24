@@ -121,8 +121,8 @@ Fires when the timer reaches zero, accompanied by a triple-beep audio chime:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<YOUR_USERNAME>/<REPO_NAME>.git
-   cd <REPO_NAME>
+   git clone https://github.com/TamarHoory/ESP32-Pomodoro-Timer.git
+   cd ESP32-Pomodoro-Timer
    ```
 
 2. **Open in VS Code**:
