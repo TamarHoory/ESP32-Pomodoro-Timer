@@ -140,13 +140,15 @@ Fires when the timer reaches zero, accompanied by a triple-beep audio chime:
      ```bash
      pio run --target upload
      ```
-     ### Running via Wokwi Simulation
-
-You can test and run this project without physical hardware using the [Wokwi simulator](https://wokwi.com/):
+     - ### Running via Wokwi Simulation
+     - You can test and run this project without physical hardware using the [Wokwi simulator](https://wokwi.com/):
 
 1. Make sure you have the **Wokwi Simulator** extension installed in VS Code.
 2. Open the project folder in VS Code.
 3. Open the `diagram.json` file, and click the **Play** button (or use the command palette `Wokwi: Start Simulator`) to run the interactive simulation with the virtual ESP32, LCD, and buttons.
+    
+
+
      
 
 4. **Monitor Serial Output**:
