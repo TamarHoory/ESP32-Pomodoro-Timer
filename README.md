@@ -1,6 +1,6 @@
 # ESP32 Pomodoro Timer ⏱️
 
-A standalone, tactile desktop Pomodoro productivity timer powered by an **ESP32** microcontroller and a **16x2 I2C LCD (LCD1602)** display. Complete with custom KiCad hardware schematics, PCB layout, and robust, non-blocking Arduino/PlatformIO firmware.
+A standalone, tactile desktop Pomodoro productivity timer powered by an **ESP32** microcontroller and a **16x2 I2C LCD (LCD1602)** display. Complete with custom KiCad hardware schematics, (PCB layout currently in progress), and robust, non-blocking Arduino/PlatformIO firmware.
 
 ---
 
@@ -41,6 +41,8 @@ ESP32-Pomodoro-Timer/
 │   └── platformio.ini                 # PlatformIO environment configuration
 │
 ├── .gitignore                         # Build and temporary files exclusion
+├── diagram.json                       # Wokwi simulation diagram
+├── wokwi.toml                         # Wokwi simulation configuration
 └── README.md                          # Project documentation
 ```
 
@@ -138,6 +140,14 @@ Fires when the timer reaches zero, accompanied by a triple-beep audio chime:
      ```bash
      pio run --target upload
      ```
+     ### Running via Wokwi Simulation
+
+You can test and run this project without physical hardware using the [Wokwi simulator](https://wokwi.com/):
+
+1. Make sure you have the **Wokwi Simulator** extension installed in VS Code.
+2. Open the project folder in VS Code.
+3. Open the `diagram.json` file, and click the **Play** button (or use the command palette `Wokwi: Start Simulator`) to run the interactive simulation with the virtual ESP32, LCD, and buttons.
+     
 
 4. **Monitor Serial Output**:
    - Open the serial monitor at 115200 baud:
