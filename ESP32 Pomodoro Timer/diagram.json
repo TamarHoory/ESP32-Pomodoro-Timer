@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "author": "Tamar Hoory",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -120,
+      "left": 140,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_start",
+      "top": 40,
+      "left": 160,
+      "attrs": {
+        "color": "green",
+        "label": "Start / Pause (18)"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_reset",
+      "top": 110,
+      "left": 160,
+      "attrs": {
+        "color": "red",
+        "label": "Reset (19)"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_set",
+      "top": 180,
+      "left": 160,
+      "attrs": {
+        "color": "blue",
+        "label": "Set +5m (23)"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 20,
+      "left": -130,
+      "attrs": {
+        "volume": "0.1"
+      }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [ "h-20", "v120" ] ],
+    [ "lcd1:VCC", "esp:5V", "red", [ "h-30", "v200" ] ],
+    [ "lcd1:SDA", "esp:21", "blue", [ "h-10", "v150" ] ],
+    [ "lcd1:SCL", "esp:22", "purple", [ "h-15", "v130" ] ],
+    [ "btn_start:1.l", "esp:18", "green", [ "h0" ] ],
+    [ "btn_start:2.l", "esp:GND.2", "black", [ "h-30" ] ],
+    [ "btn_reset:1.l", "esp:19", "red", [ "h0" ] ],
+    [ "btn_reset:2.l", "esp:GND.2", "black", [ "h-30" ] ],
+    [ "btn_set:1.l", "esp:23", "blue", [ "h0" ] ],
+    [ "btn_set:2.l", "esp:GND.2", "black", [ "h-30" ] ],
+    [ "bz1:1", "esp:GND.1", "black", [ "v0" ] ],
+    [ "bz1:2", "esp:25", "orange", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
